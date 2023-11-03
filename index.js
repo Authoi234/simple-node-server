@@ -7,7 +7,8 @@ app.get('/', (req, res) => {
     res.send('simple node server running')
 });
 
-app.use(cors())
+app.use(cors());
+app.use(express.json());
 
 const users = [
     {id: 1, name: 'Sabana', email: 'sabana@gmail.com'},
@@ -17,6 +18,15 @@ const users = [
 
 app.get('/users', (req, res) => {
     res.send(users)
+})
+
+app.post('/users', (req, res) => {
+    console.log('Post Api Called');
+    const user = req.body;
+    user.id = users.length + 1;
+    users.push(user);
+    console.log(user);
+    res.send(user);
 })
 
 app.listen(port, () => {
