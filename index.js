@@ -1,24 +1,24 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
-const cors = require('cors');
+
+app.get('/', (req, res) => {
+    res.send('simple node server running')
+});
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('Simple Node Server Running')
-})
-
 const users = [
     {id: 1, name: 'Sabana', email: 'sabana@gmail.com'},
-    {id: 2, name: 'abana', email: 'abana@gmail.com'},
-    {id: 3, name: 'lorbana', email: 'lorbana@gmail.com'}
-];
+    {id: 2, name: 'Sabnoor', email: 'sabnoor@gmail.com'},
+    {id: 3, name: 'Sabila', email: 'sabila@gmail.com'},
+]
 
 app.get('/users', (req, res) => {
     res.send(users)
 })
 
 app.listen(port, () => {
-    console.log(`Simple not surver running on port ${port}`);
+    console.log(`Simple node server running on port ${port}`);
 })
