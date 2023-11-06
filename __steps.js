@@ -7,3 +7,9 @@ POST
 5. Make sure to use JSON.stringify to send data
 6. use express.json() as middleware
 */
+
+/* 
+Query:
+https://www.youtube.com/watch?v=CSB8DohoFfA&ab_channel=GSeriesMusic
+path?name=value&name=value&name=value
+*/
