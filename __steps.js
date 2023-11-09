@@ -13,3 +13,11 @@ Query:
 https://www.youtube.com/watch?v=CSB8DohoFfA&ab_channel=GSeriesMusic
 path?name=value&name=value&name=value
 */
+
+/* 
+1. sign up mongodb atlas
+2. dba user
+3. whitelist your ip address
+4. database> connect> show entire code
+5. npm i mongodb
+*/
